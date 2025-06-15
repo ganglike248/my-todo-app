@@ -134,3 +134,192 @@
 .todo-list-container::-webkit-scrollbar-thumb:hover {
   background: #a8a8a8;
 }
+
+/* 기존 스타일에 추가할 내용 */
+
+.todo-stats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 12px 16px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #495057;
+  font-weight: 500;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  margin-bottom: 12px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #3498db;
+  transition: all 0.2s ease;
+}
+
+.todo-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 완료된 할 일 스타일 */
+.todo-item.completed {
+  background: #e9ecef;
+  border-left-color: #28a745;
+  opacity: 0.7;
+}
+
+.todo-item.completed .todo-text {
+  text-decoration: line-through; /* 취소선 추가 */
+  color: #6c757d;
+}
+
+.todo-content {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.todo-checkbox {
+  width: 18px;
+  height: 18px;
+  margin-right: 12px;
+  cursor: pointer;
+  accent-color: #28a745; /* 체크박스 색상 */
+}
+
+.todo-text {
+  flex: 1;
+  font-size: 16px;
+  color: #2c3e50;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.todo-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.todo-date {
+  font-size: 12px;
+  color: #7f8c8d;
+}
+
+.delete-button {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.delete-button:hover {
+  background: #ff6b6b;
+  transform: scale(1.1);
+}
+
+/* App.css에 추가할 스타일 */
+
+.edit-input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 2px solid #3498db;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  background: white;
+  outline: none;
+}
+
+.edit-input:focus {
+  border-color: #2980b9;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.edit-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.save-button, .cancel-button {
+  background: none;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.save-button:hover {
+  background: #28a745;
+  transform: scale(1.1);
+}
+
+.cancel-button:hover {
+  background: #dc3545;
+  transform: scale(1.1);
+}
+
+.todo-text {
+  cursor: pointer; /* 클릭 가능함을 표시 */
+}
+
+.todo-text:hover {
+  background: rgba(52, 152, 219, 0.1);
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+/* 개선된 통계 스타일 */
+.todo-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+  padding: 16px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  color: white;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+}
+
+.stat-label {
+  display: block;
+  font-size: 12px;
+  opacity: 0.8;
+  margin-bottom: 4px;
+}
+
+.stat-value {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.stat-value.completed {
+  color: #4ecdc4;
+}
+
+.stat-value.pending {
+  color: #ffd93d;
+}
+
+.stat-value.rate {
+  color: #aba1f5;
+}
